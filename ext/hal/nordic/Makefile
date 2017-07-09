@@ -1,19 +1,13 @@
-ifdef CONFIG_HAS_NORDIC_MDK
-ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/mdk
-endif
-
-ifdef CONFIG_HAS_NORDIC_HAL
-ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/hal
+ifdef CONFIG_HAS_NRFX
+ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/nrfx/mdk
+ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/nrfx/hal
+ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/nrfx
+ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/nrfx/drivers/include
+ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic
 endif
 
 ifdef CONFIG_HAS_NORDIC_DRIVERS
 ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/drivers
-endif
-
-ifdef CONFIG_HAS_NRFX
-ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/nrfx
-ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/nrfx/drivers/include
-ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic
 endif
 
 obj- += dummy.o

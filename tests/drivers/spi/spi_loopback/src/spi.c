@@ -74,10 +74,31 @@ struct spi_cs_control spi_cs = {
 	.delay = 0,
 };
 
-#else
+#elif defined (CONFIG_BOARD_NRF51_PCA10028) || \
+      defined (CONFIG_BOARD_NRF52_PCA10040) || \
+      defined (CONFIG_BOARD_NRF52840_PCA10056)
+
+#if defined (CONFIG_BOARD_NRF51_PCA10028)
+#define SPI_DRV_NAME CONFIG_SPI_1_NAME
+#elif defined (CONFIG_BOARD_NRF52_PCA10040)
+#define SPI_DRV_NAME CONFIG_SPI_0_NAME
+#elif defined (CONFIG_BOARD_NRF52840_PCA10056)
+#define SPI_DRV_NAME CONFIG_SPI_2_NAME
+#endif
+
+#define SPI_SLAVE 0
+#define MIN_FREQ 125000
+
 #undef SPI_CS
 #define SPI_CS NULL
 #define CS_CTRL_GPIO_DRV_NAME ""
+
+#else
+
+#undef SPI_CS
+#define SPI_CS NULL
+#define CS_CTRL_GPIO_DRV_NAME ""
+
 #endif
 
 #define BUF_SIZE 17

@@ -40,42 +40,42 @@
 // <e> NRFX_PRS_ENABLED - nrfx_prs - Peripheral Resource Sharing module
 //==========================================================
 #ifndef NRFX_PRS_ENABLED
-#define NRFX_PRS_ENABLED 1
+#define NRFX_PRS_ENABLED 0
 #endif
 #if  NRFX_PRS_ENABLED
 // <q> NRFX_PRS_BOX_0_ENABLED  - Enables box 0 in the module.
 
 
 #ifndef NRFX_PRS_BOX_0_ENABLED
-#define NRFX_PRS_BOX_0_ENABLED 1
+#define NRFX_PRS_BOX_0_ENABLED 0
 #endif
 
 // <q> NRFX_PRS_BOX_1_ENABLED  - Enables box 1 in the module.
 
 
 #ifndef NRFX_PRS_BOX_1_ENABLED
-#define NRFX_PRS_BOX_1_ENABLED 1
+#define NRFX_PRS_BOX_1_ENABLED 0
 #endif
 
 // <q> NRFX_PRS_BOX_2_ENABLED  - Enables box 2 in the module.
 
 
 #ifndef NRFX_PRS_BOX_2_ENABLED
-#define NRFX_PRS_BOX_2_ENABLED 1
+#define NRFX_PRS_BOX_2_ENABLED 0
 #endif
 
 // <q> NRFX_PRS_BOX_3_ENABLED  - Enables box 3 in the module.
 
 
 #ifndef NRFX_PRS_BOX_3_ENABLED
-#define NRFX_PRS_BOX_3_ENABLED 1
+#define NRFX_PRS_BOX_3_ENABLED 0
 #endif
 
 // <q> NRFX_PRS_BOX_4_ENABLED  - Enables box 4 in the module.
 
 
 #ifndef NRFX_PRS_BOX_4_ENABLED
-#define NRFX_PRS_BOX_4_ENABLED 1
+#define NRFX_PRS_BOX_4_ENABLED 0
 #endif
 
 // <e> NRFX_PRS_CONFIG_LOG_ENABLED - Enables logging in the module.
@@ -837,7 +837,7 @@
 
 // <e> NRFX_SPI_ENABLED - nrfx_spi - SPI peripheral driver
 //==========================================================
-#ifndef NRFX_SPI_ENABLED
+#ifdef CONFIG_SPI_NRF5
 #define NRFX_SPI_ENABLED 1
 #endif
 #if  NRFX_SPI_ENABLED
@@ -861,21 +861,21 @@
 // <q> NRFX_SPI0_ENABLED  - Enable SPI0 instance
 
 
-#ifndef NRFX_SPI0_ENABLED
+#ifdef CONFIG_SPI_0_NRF5
 #define NRFX_SPI0_ENABLED 1
 #endif
 
 // <q> NRFX_SPI1_ENABLED  - Enable SPI1 instance
 
 
-#ifndef NRFX_SPI1_ENABLED
+#ifdef CONFIG_SPI_1_NRF5
 #define NRFX_SPI1_ENABLED 1
 #endif
 
 // <q> NRFX_SPI2_ENABLED  - Enable SPI2 instance
 
 
-#ifndef NRFX_SPI2_ENABLED
+#ifdef CONFIG_SPI_2_NRF5
 #define NRFX_SPI2_ENABLED 1
 #endif
 

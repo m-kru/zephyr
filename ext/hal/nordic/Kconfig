@@ -9,3 +9,6 @@ config HAS_NRFX
 
 config HAS_NORDIC_DRIVERS
 	bool
+
+config NRFX_SPI
+	bool

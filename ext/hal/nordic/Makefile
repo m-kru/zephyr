@@ -10,7 +10,6 @@ ifdef CONFIG_HAS_NORDIC_DRIVERS
 ZEPHYRINCLUDE += -I$(srctree)/ext/hal/nordic/drivers
 endif
 
-obj- += dummy.o
 obj-$(CONFIG_NRFX_PRS) += nrfx/drivers/src/prs/nrfx_prs.o
 obj-$(CONFIG_NRFX_ADC) += nrfx/drivers/src/nrfx_adc.o
 obj-$(CONFIG_NRFX_PWM) += nrfx/drivers/src/nrfx_pwm.o

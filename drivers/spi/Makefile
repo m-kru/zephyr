@@ -5,6 +5,7 @@ obj-$(CONFIG_SPIM_NRF52) += spim_nrf52_legacy.o
 obj-$(CONFIG_SPIS_NRF5) += spis_nrf5_legacy.o
 else
 obj-$(CONFIG_SPI_DW) += spi_dw.o
+obj-$(CONFIG_SPI_NRF5) += spi_nrf5.o
 endif
 obj-$(CONFIG_SPI_MCUX_DSPI) += spi_mcux_dspi.o
 obj-$(CONFIG_SPI_QMSI) += spi_qmsi.o

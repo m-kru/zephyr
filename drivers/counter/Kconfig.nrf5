@@ -1,0 +1,87 @@
+config RTC_NRF5
+	bool "nRF5 RTC Driver"
+	select NRFX_RTC
+	depends on COUNTER && SOC_FAMILY_NRF5
+	help
+	  Build nRF5 RTC driver.
+
+config RTC_0
+	bool "Enable RTC 0 instance"
+	depends on RTC_NRF5
+
+if RTC_0
+
+config RTC_0_NAME
+	string "RTC 0 driver instance name"
+	default "RTC_0"
+	help
+	  RTC_0 driver instance name
+
+config RTC_0_IRQ_PRI
+	int "RTC 0 driver Interrupt priority"
+	default 1
+	help
+	  RTC interrupt priority.
+
+config RTC_0_PRESCALER
+	int "Value of RTC 0 counter prescaler"
+	default 0
+	range 0 4095
+	help
+	  Counter prescaler value.
+
+endif
+
+config RTC_1
+	bool "Enable RTC 1 instance"
+	depends on RTC_NRF5
+
+if RTC_1
+
+config RTC_1_NAME
+	string "RTC1 driver instance name"
+	default "RTC_1"
+	help
+	  RTC_1 driver instance name
+
+config RTC_1_IRQ_PRI
+	int "RTC 1 driver Interrupt priority"
+	default 1
+	help
+	  RTC interrupt priority.
+
+config RTC_1_PRESCALER
+	int "Value of RTC 1 counter prescaler"
+	default 0
+	range 0 4095
+	help
+	  Counter prescaler value.
+
+endif
+
+config RTC_2
+	bool "Enable RTC 2 instance"
+	depends on RTC_NRF5 && SOC_SERIES_NRF52X
+
+if RTC_2
+
+config RTC_2_NAME
+	string "RTC 2 driver instance name"
+	default "RTC_2"
+	help
+	  RTC_2 driver instance name
+
+config RTC_2_IRQ_PRI
+	int "RTC 2 Driver Interrupt priority"
+	default 1
+	help
+	  RTC interrupt priority.
+
+config RTC_2_PRESCALER
+	int "Value of RTC 2 counter prescaler"
+	default 0
+	range 0 4095
+	help
+	  Counter prescaler value.
+
+endif

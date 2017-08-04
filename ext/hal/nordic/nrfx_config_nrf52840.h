@@ -320,7 +320,7 @@
 
 // <e> NRFX_RTC_ENABLED - nrfx_rtc - RTC peripheral driver
 //==========================================================
-#ifndef NRFX_RTC_ENABLED
+#ifdef CONFIG_NRFX_RTC
 #define NRFX_RTC_ENABLED 1
 #endif
 #if  NRFX_RTC_ENABLED
@@ -358,21 +358,21 @@
 // <q> NRFX_RTC0_ENABLED  - Enable RTC0 instance
 
 
-#ifndef NRFX_RTC0_ENABLED
+#ifdef CONFIG_RTC_0
 #define NRFX_RTC0_ENABLED 1
 #endif
 
 // <q> NRFX_RTC1_ENABLED  - Enable RTC1 instance
 
 
-#ifndef NRFX_RTC1_ENABLED
+#ifdef CONFIG_RTC_1
 #define NRFX_RTC1_ENABLED 1
 #endif
 
 // <q> NRFX_RTC2_ENABLED  - Enable RTC2 instance
 
 
-#ifndef NRFX_RTC2_ENABLED
+#ifdef CONFIG_RTC_2
 #define NRFX_RTC2_ENABLED 1
 #endif
 
@@ -396,7 +396,7 @@
 // <4=> Debug
 
 #ifndef NRFX_RTC_CONFIG_LOG_LEVEL
-#define NRFX_RTC_CONFIG_LOG_LEVEL 3
+#define NRFX_RTC_CONFIG_LOG_LEVEL 0
 #endif
 
 // <o> NRFX_RTC_CONFIG_INFO_COLOR  - ANSI escape code prefix.

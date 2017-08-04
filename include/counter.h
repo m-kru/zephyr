@@ -105,6 +105,12 @@ static inline u32_t counter_read(struct device *dev)
  * @retval -ENOTSUP if the counter was not started yet.
  * @retval -ENODEV if the device doesn't support interrupt (e.g. free
  *                        running counters).
+ * @retval -ENOMEM if there are no resources to set more concurrent running
+ *                 alarms.
+ * @retval -EINVAL if count value is out of possible range.
+ * @retval -ECANCELED if alarm can not be set due to some specific reasons. For
+ *		      example alarm value is closer to the current counter value
+ *		      than some minimal delta.
  * @retval Negative errno code if failure.
  */
 static inline int counter_set_alarm(struct device *dev,

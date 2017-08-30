@@ -39,7 +39,7 @@
 
 // <e> NRFX_ADC_ENABLED - nrfx_adc - Driver for ADC peripheral
 //==========================================================
-#ifndef NRFX_ADC_ENABLED
+#ifdef CONFIG_NRFX_ADC
 #define NRFX_ADC_ENABLED 1
 #endif
 #if  NRFX_ADC_ENABLED

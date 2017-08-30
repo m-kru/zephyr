@@ -82,4 +82,6 @@ source "drivers/adc/Kconfig.qmsi"
 
 source "drivers/adc/Kconfig.ti_adc108s102"
 
+source "drivers/adc/Kconfig.nrf51"
+
 endif # ADC

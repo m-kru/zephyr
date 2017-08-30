@@ -18,3 +18,6 @@ config NRFX_RTC
 
 config NRFX_SPIM
 	bool
+
+config NRFX_ADC
+	bool

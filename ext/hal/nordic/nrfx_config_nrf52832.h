@@ -575,7 +575,7 @@
 
 // <e> NRFX_SPIM_ENABLED - nrfx_spim - SPIM peripheral driver
 //==========================================================
-#ifndef NRFX_SPIM_ENABLED
+#ifdef CONFIG_SPIM_NRF5
 #define NRFX_SPIM_ENABLED 1
 #endif
 #if  NRFX_SPIM_ENABLED
@@ -599,21 +599,21 @@
 // <q> NRFX_SPIM0_ENABLED  - Enable SPI0 instance
 
 
-#ifndef NRFX_SPIM0_ENABLED
+#ifdef CONFIG_SPIM_0_NRF5
 #define NRFX_SPIM0_ENABLED 1
 #endif
 
 // <q> NRFX_SPIM1_ENABLED  - Enable SPI1 instance
 
 
-#ifndef NRFX_SPIM1_ENABLED
+#ifdef CONFIG_SPIM_1_NRF5
 #define NRFX_SPIM1_ENABLED 1
 #endif
 
 // <q> NRFX_SPIM2_ENABLED  - Enable SPI2 instance
 
 
-#ifndef NRFX_SPIM2_ENABLED
+#ifdef CONFIG_SPIM_2_NRF5
 #define NRFX_SPIM2_ENABLED 1
 #endif
 

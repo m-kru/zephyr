@@ -15,3 +15,6 @@ config NRFX_SPI
 
 config NRFX_RTC
 	bool
+
+config NRFX_SPIM
+	bool

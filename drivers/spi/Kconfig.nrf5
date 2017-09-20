@@ -286,6 +286,12 @@ config SPI_NRF5
 	select NRFX_SPI
 	default y if (SPI_0_NRF5 || SPI_1_NRF5 || SPI_2_NRF5)
 
+config SPIM_NRF5
+	bool
+	depends on SPI_NRF5_DRIVERS
+	select NRFX_SPIM
+	default y if (SPIM_0_NRF5 || SPIM_1_NRF5 || SPIM_2_NRF5)
+
 config SPI_NRF5_SS_UNUSED_PIN
 	int
 	default 255
